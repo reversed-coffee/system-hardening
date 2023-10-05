@@ -1,4 +1,4 @@
-# system-infoesc
+# system-hardening
 
 This repository is a collection of notes and resources related to information security
 operations on computer systems.
