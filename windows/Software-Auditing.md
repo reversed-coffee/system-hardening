@@ -34,6 +34,16 @@
         - Remove features are not critical and may pose a risk, such as LPD Print Service
     - In some cases a reboot may be necessary for features to be completely removed
 
+- Services
+    - Windows Update - Enable
+    - Remote Desktop Services - Allows RDP
+    - Remote Registry - Disable, allows remote modification of Windows registry, which can allow for privilege escalation
+    - SNMP Trap - Disable, MiTM risk
+    - SSDP Discovery - Disable
+ 
+- View live network connections with `netstat`
+    - Can be used to find odd connections, especially connections to C2 servers
+
 - Application hardening
     - Web browsers
         - See [Browser Security](../universal/Browser-Security.md)
