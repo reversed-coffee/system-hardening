@@ -10,6 +10,8 @@
  
 - Password aging `/etc/login.defs` 
     - Look for PASS_MAX_DAYS, PASS_MIN_DAYS and set it to a reasonable number like max 90 and min 30
+    - `sudo chage -l mj` to view password policy info
+    - Set minimum/maximum over CLI -> `sudo chage -m 30 mj && sudo chage -M 90 mj`
 
 - User groups `/etc/group`
     - Look for `sudo` and `admin` or `adm`
