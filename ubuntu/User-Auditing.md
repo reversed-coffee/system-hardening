@@ -25,3 +25,7 @@
     - Pay attention for text files `*.txt`, and media files `*.mp3`, `*.mp4`, etc.
     - Remove files with `rm`
     - Dotfiles (files prepended with a `.`) are generally suspicious so inspect them
+
+- PAM Password management `/etc/pam.d/common-password`
+    - Look for `password` and set `remember` to remember a reasonable amount of passwords like 14
+    - Look for more options that may increase security
