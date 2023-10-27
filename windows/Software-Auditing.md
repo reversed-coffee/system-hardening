@@ -47,3 +47,11 @@
 - Application hardening
     - Web browsers
         - See [Browser Security](../universal/Browser-Security.md)
+
+- Windows Defender
+    - Group Policy -> Windows Components -> Windows Defender Antivirus
+    - Turn Off Defender - Disable
+    - Real-Time Protection
+          - Turn off real-time - Disable
+    - Remove exclusions
+    - Do a scan on the Users folder and shares
