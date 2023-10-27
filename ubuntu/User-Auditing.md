@@ -13,7 +13,14 @@
 - User groups `/etc/group`
     - Look for `sudo` and `admin` or `adm`
     - Look for accounts that aren't authorized and delete them
+    - Add user to group `sudo useradd -aG <group> <username>` or `sudo gpasswd -a <username> <group>`
  
 - Add users `useradd <username>` or `adduser <username>` for Ubuntu
     - Set password using `passwd <username>`
     - Make folder `mkdir /home/<username>` and set permissions `chown <username>:<username> /home/<username>`
+
+- Auditing filesystem
+    - Look in home directories `find /home -iname "*.ext" -print
+    - Pay attention for text files `*.txt`, and media files `*.mp3`, `*.mp4`, etc.
+    - Remove files with `rm`
+    - Dotfiles (files prepended with a `.`) are generally suspicious so inspect them
