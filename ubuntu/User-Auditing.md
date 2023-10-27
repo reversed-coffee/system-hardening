@@ -9,3 +9,11 @@
  
 - Password aging `/etc/login.defs` 
     - Look for PASS_MAX_DAYS, PASS_MIN_DAYS and set it to a reasonable number like max 90 and min 30
+
+- User groups `/etc/group`
+    - Look for `sudo` and `admin` or `adm`
+    - Look for accounts that aren't authorized and delete them
+ 
+- Add users `useradd <username>` or `adduser <username>` for Ubuntu
+    - Set password using `passwd <username>`
+    - Make folder `mkdir /home/<username>` and set permissions `chown <username>:<username> /home/<username>`
