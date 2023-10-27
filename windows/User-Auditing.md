@@ -7,6 +7,7 @@
     - Change insecure passwords
         - Avoid changing current user password; can interfere with auto-login
         - Force users to change password on next login
+        - Always make passwords expire for all accounts
     - Disable built-in Guest account
 
 - User policies
@@ -33,6 +34,8 @@
         - UAC Built-in Admin Approval Mode - Enable
         - Run all admins in Admin Approval Mode - Enable
         - Enable computer and user accounts to be trusted for delegation - Remove all users under it
+        - Manage auditing and security log - Disable for non-admins
+        - 
     - Enumerate admin accounts on elevation, disable it - (Group Policy -> Windows Components -> Credential User Interface)
         - To update, run `gpupdate /force`
 
