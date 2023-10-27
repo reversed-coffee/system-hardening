@@ -54,6 +54,8 @@
         - Do you NEED to share the entire C drive?
     - Manage access control accordingly
         - Restrict who can connect to the file sharing server
+    - Server Manager -> Storage Services -> Shares
+        - Modify permissions
      
 - Securing SMB
     - If using SMB 1.0, remove it and install newer edition
