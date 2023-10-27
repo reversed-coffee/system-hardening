@@ -31,3 +31,7 @@
 - PAM Password management `/etc/pam.d/common-password`
     - Look for `password` and set `remember` to remember a reasonable amount of passwords like 14
     - Look for more options that may increase security
+
+- Password Quality `/etc/security/pwquality.conf`
+    - Minimum length set to 14
+    - Look at other stuff
