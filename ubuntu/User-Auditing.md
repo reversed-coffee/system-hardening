@@ -35,3 +35,7 @@
 - Password Quality `/etc/security/pwquality.conf`
     - Minimum length set to 14
     - Look at other stuff
+
+- Shadow passwords `/etc/shadow`
+    - Short hashes, no password, unhashed or plaintext password
+    - Reset password with `passwd` and it should fix
