@@ -19,9 +19,24 @@
 
 - Securing SSH
     - If not critical, disable and stop the service `sudo systemctl disable sshd && sudo systemctl stop sshd`
-    - `/etc/ssh/sshd_config` set PermitRootLogin to `no` if set to yes, make sure that it's also uncommented
+    - `/etc/ssh/sshd_config`
+         - Set PermitRootLogin to `no` if set to yes, make sure that it's also uncommented
+         - Set PermitEmptyPasswords to `no` as well
+    - Check for overrides in `/etc/ssh/sshd.config.d`
+    - Check file permissions in `/etc/ssh/` look for keys and config permissions especially - only `root` should have access to them
 
 - Log files `/var/log` has a bunch of stuff
     - `cat /var/log/boot.log` shows boot log
     - `journalctl -xe` shows system logs from boot to command run
     - `dmesg` shows kernel logs
+
+- TCP SYN Cookie Protection
+    - `sudo sysctl -w -n net.ipv4.tcp_syncookies=1`
+    - `/etc/sysctl.conf` uncomment `net.ipv4.tcp_syncookies=1`
+ 
+- NGINX `/etc/nginx`
+    - Inspect headers, stuff like always enabling sameorigin is not OK
+    - Set `server_tokens off` in `http`
+    - Use TLS 1.0, 1.1, 1.2, 1.3
+    - Prefer server ciphers too
+    - Look at anything else on there
