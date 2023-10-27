@@ -3,4 +3,9 @@
     - Look for hacking tools, servers, etc.
 - `apt install` to install, `apt remove` to remove
 - Make sure to run `update` and `upgrade`
-- Ubuntu Software Center should install updates immediately and use secure settings
+- Ubuntu Software Center
+    - Open with `software-properties-gtk`
+    - Turn off proprietary software and restricted software
+    - Install security and recommended updates
+    - Check for updates as often as possible
+    - Download and install updates automatically
