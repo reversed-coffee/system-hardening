@@ -20,6 +20,10 @@
     - If not critical, ensure that it's disabled
     - If critical, secure it by restricting it to users that need it
     - If remote assistance is not allowed by company policy, disable it
+    - Group policies
+        - Windows Compontents -> Remote Desktop Services -> Session Host -> Security
+        - Set client connection encryption level - High level, enabled
+        - Require use of specific security layer - SSL, enabled
 
 - Virtual Network Computing (VNC)
     - Managed by third party software
@@ -50,3 +54,8 @@
         - Do you NEED to share the entire C drive?
     - Manage access control accordingly
         - Restrict who can connect to the file sharing server
+     
+- Securing SMB
+    - If using SMB 1.0, remove it and install newer edition
+ 
+- Server Manager -> Local Server -> IE Enhanced Security - Enable
