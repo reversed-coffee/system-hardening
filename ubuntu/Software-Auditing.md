@@ -9,6 +9,7 @@
     - Install security and recommended updates
     - Check for updates as often as possible
     - Download and install updates automatically
+- Quick system update: `sudo apt-get update && sudo apt-get upgrade -y`
   
 ## Active Services
 - `service --status-all` disable services that aren't critical
