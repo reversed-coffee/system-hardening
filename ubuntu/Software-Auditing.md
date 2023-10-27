@@ -43,3 +43,14 @@
     - Use TLS 1.0, 1.1, 1.2, 1.3
     - Prefer server ciphers too
     - Look at anything else on there
+
+- Aliases/overrides
+    - Check with `alias` for malicious aliases
+     - Can remove all aliases with `unalias -a`
+     - Look in `~/.bashrc` for aliases too
+
+ - Scan network
+    - `netstat -antp | grep LISTEN` to view active connections
+    - Can look for ports that shouldnt be open and take proper action
+  
+- Get command/user of process ID: `sudo ps -fp <pid>`
