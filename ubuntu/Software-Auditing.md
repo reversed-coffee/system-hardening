@@ -29,6 +29,9 @@
     - `cat /var/log/boot.log` shows boot log
     - `journalctl -xe` shows system logs from boot to command run
     - `dmesg` shows kernel logs
+         - Restrict `dmesg` it can have important information
+              - `sudo sysctl -w kernel.dmesg_restrict=1`
+              - `/etc/sysctl.conf` enable there too
 
 - TCP SYN Cookie Protection
     - `sudo sysctl -w -n net.ipv4.tcp_syncookies=1`
