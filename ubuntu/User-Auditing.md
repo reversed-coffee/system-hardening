@@ -2,3 +2,10 @@
     - Remove unauthorized users with `deluser --remove-home <username>`
     - Remove the home manually too `rm -rf /home/<username>`
  
+- Secure `/etc/sudoers`
+    - Make sure that that groups look OK
+    - Expected groups are `root`, `sudo`, and `admin` can have root access
+    - User exceptions should not be secure unless the company allows it
+ 
+- Password aging `/etc/login.defs` 
+    - Look for PASS_MAX_DAYS, PASS_MIN_DAYS and set it to a reasonable number like max 90 and min 30
