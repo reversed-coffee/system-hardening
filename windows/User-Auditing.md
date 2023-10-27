@@ -9,7 +9,7 @@
         - Force users to change password on next login
     - Disable built-in Guest account
 
-- User policies (Local Security Policy)
+- User policies
     - Follow company guidelines
     - Audit policy
         - Enable login/logout auditing
@@ -29,7 +29,16 @@
             - Always enable this
         - Store passwords using reversible encryption
             - Severe risk; always disable this
+    - User Rights Assignment
+        - UAC Built-in Admin Approval Mode - Enable
+        - Run all admins in Admin Approval Mode - Enable
+        - Enable computer and user accounts to be trusted for delegation - Remove all users under it
+    - Enumerate admin accounts on elevation, disable it - (Group Policy -> Windows Components -> Credential User Interface)
+        - To update, run `gpupdate /force`
 
 - Review user files
     - Based on company guidelines, users may not allowed to store certain forms of media on their computers
     - Delete files that are not authorized
+    - Scan for files by extension using `dir`: `dir /s /b *.ext`
+        - Look especially for exe files, archive files, and media files.
+        - Look inside of shares as well.
